@@ -7,7 +7,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import Favorites from './components/Favorites/Favorites';
 import axios from 'axios';
 
-axios.defaults.baseURL = 'http://localhost:3001'
+axios.defaults.baseURL = 'https://deploy-production-1486.up.railway.app/'
 
 
 function App () {
