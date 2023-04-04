@@ -4,7 +4,7 @@ import axios from 'axios'
 
 export const getDogs = () =>{
     return async (dispatch) =>{
-        const response = await axios('http://localhost:3001/dogs');
+        const response = await axios('/dogs');
         return dispatch({
             type: GET_DOGS,
             payload: response.data
@@ -14,7 +14,7 @@ export const getDogs = () =>{
 
 export const getDogByName = (name) =>{
   return async (dispatch) =>{
-    const response = await axios(`http://localhost:3001/dogs/?name=${name}`);
+    const response = await axios(`/dogs/?name=${name}`);
     return dispatch({
       type: GET_DOG_BY_NAME,
       payload: response.data
@@ -30,7 +30,7 @@ export const resetDogs = () => {
 
 export const getDogDetail = (id) => {
   return async (dispatch) => {
-    const response = await axios(`http://localhost:3001/dogs/${id}`
+    const response = await axios(`/dogs/${id}`
     );
     return dispatch({
       type: GET_DOG_DETAIL,
@@ -48,7 +48,7 @@ export const resetDetail = () => {
 export const postDog = (dogData) => {
   return async (dispatch) => {
     try {
-      const response = await axios.post('http://localhost:3001/dogs', dogData);
+      const response = await axios.post('/dogs', dogData);
 
       if (response.status === 201) {
         dispatch({
@@ -126,7 +126,7 @@ export const order = (order) =>{
 
 export const getTempers = () =>{
   return async (dispatch) =>{
-        const response = await axios('http://localhost:3001/tempers');
+        const response = await axios('/tempers');
         return dispatch({
             type: GET_TEMPERS,
             payload: response.data

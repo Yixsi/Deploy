@@ -4,7 +4,10 @@ import Form from './components/Form/Form'
 import Home from './components/Home/Home'
 import Landing from './components/Landing/Landing'
 import { Routes, Route, useLocation } from 'react-router-dom';
-import Favorites from './components/Favorites/Favorites'
+import Favorites from './components/Favorites/Favorites';
+import axios from 'axios';
+
+axios.defaults.baseURL = 'http://localhost:3001'
 
 
 function App () {
