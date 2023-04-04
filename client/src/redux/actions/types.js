@@ -1,0 +1,15 @@
+export const GET_DOGS = 'GET_DOGS';
+export const GET_DOG_BY_NAME = 'GET_DOG_BY_NAME';
+export const RESET_DOGS = 'RESET_DOGS';
+export const GET_DOG_DETAIL = 'GET_DOG_DETAIL';
+export const ADD_FAVORITE = 'ADD_FAVORITE';
+export const DELETE_FAVORITE = 'DELETE_FAVORITE';
+export const GET_FAVORITES = 'GET_FAVORITES';
+export const RESET_DETAIL = 'RESET_DETAIL';
+export const GET_TEMPERS = 'GET_TEMPERS';
+export const POST_DOG_SUCCESS = 'POST_DOG_SUCCESS';
+export const POST_DOG_SUCCESS_RESET = 'POST_DOG_SUCCESS_RESET';
+export const POST_DOG_ERROR = 'POST_DOG_ERROR';
+export const POST_DOG_ERROR_RESET = 'POST_DOG_ERROR_RESET';
+export const FILTER = 'FILTER';
+export const ORDER = 'ORDER';

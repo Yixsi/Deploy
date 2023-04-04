@@ -1,0 +1,258 @@
+.rowOne {
+    grid-column: 1/4;
+    grid-row: 1/2;
+    margin: 4% 2% 2% 4%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logoHome {
+    height: 60px;
+    width: max-content;
+}
+.cards {
+    grid-row: 3/4;
+    grid-column: 1/4;
+    display: grid;
+    gap: 1rem;
+    grid-auto-rows: 22rem;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    justify-content: space-around;
+    margin: 1rem 0 0 2rem;
+    padding-bottom: 1.4rem;
+
+}
+
+/* Search */
+.searchWrapper {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+
+}
+
+.logoBtns{
+    display: flex;
+    align-items: center;
+}
+
+.createBtn {
+    background-color: #342c2c;
+    height: fit-content;
+    padding: 10px 16px;
+    border-radius: 5px;
+    color: #fff;
+    transition: all 0.6s ease-in;
+    font-size: 22px;
+    font-family: var(--secFont);
+    ;
+    letter-spacing: -0.1rem;
+    border: none;
+    margin-left: 0;
+}
+
+.createBtn:hover {
+    cursor: pointer;
+    background-color: #096c77;
+    border-radius: 3px;
+}
+
+/* Pages */
+
+.arrowBtn{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    margin: 0;
+    padding: 1px;
+}
+.arrowInt {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    float: right;
+}
+
+.arrowInt:hover {
+
+    height: 36px;
+}
+
+.pages {
+    grid-column: 3/4;
+    font-family: var(--secFont);
+    margin-right: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+/*Buttons group*/
+.buttonGroup {
+    background-color: var(--java);
+    height: fit-content;
+    padding: 5px 6px;
+    border-radius: 5px;
+    margin-left: 10px;
+
+}
+
+.buttons {
+    background-color: #0fc8c800;
+    color: #fff;
+    padding: 5px 15px;
+    transition: all 0.6s ease-in;
+    font-size: 22px;
+    font-family: var(--secFont);
+    letter-spacing: -0.08rem;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.buttons:hover {
+    cursor: pointer;
+    background-color: var(--genoa);
+    border-radius: 3px;
+}
+
+/* Dropdowns */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    z-index: 100;
+}
+
+.dropdownContent {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: var(--java);
+}
+
+.dropdown:hover .dropdownContent {
+    display: block;
+}
+
+
+.option {
+    text-align: center;
+    font-family: var(--secFont);
+    padding: 5px 10px;
+    margin: 0;
+    color: #fff;
+    
+}
+
+.dropdown .option:hover {
+    background-color: var(--genoa);
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.dropdownInnerContent {
+    position: absolute;
+    left: 94px;
+    top: 0;
+    max-height: 250px;
+    z-index: 0;
+    background-color: var(--java);
+    overflow-y: scroll;
+}
+
+.optionInner{
+    text-align: center;
+    font-family: var(--secFont);
+    padding: 5px 3px;
+    margin: 0;
+    color: #fff;
+}
+
+.optionInner:hover {
+    cursor: pointer;
+    padding: 5px 3px;
+    text-shadow: 1px 1px 2px var(--thunder);
+    margin: 0;
+    /* color: var(--thunder); */
+    font-weight: 600;
+}
+
+/* Not found */
+
+.notFound {
+    grid-column: 1/4;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    font-family: var(--secFont);
+    color: var(--thunder);
+    font-size: 1.7rem;
+    font-weight: 400;
+}
+.notFound img {
+    height: 60vh;
+    width:fit-content;
+}
+
+@media screen and (max-width: 760px) {
+    .rowOne{
+        z-index: 100;
+       max-width: 90vw;
+    }
+    .searchWrapper{
+        margin-left: auto;
+    }
+    .logoHome{
+        display: none;
+    }
+    .notFound{
+        flex-direction: column;
+    }
+    .notFound p{
+        font-size: 1.3rem;
+    }
+
+    .notFound img{
+        height: 40vh;
+        width: fit-content;
+    }
+    .createBtn{
+        font-size: 1.2rem;
+        padding: 8px 12px;
+    }
+    .createBtn img{
+        height: 16px;
+    }
+    .pages {
+        flex-wrap: wrap;
+        width: 80vw;
+        font-size: 0.9rem;
+    }
+   
+}
+
+@media screen and (max-width: 480px) {
+    .notFound {
+        flex-direction: column;
+        
+    }
+    .notFound p{
+        font-size: 1.2rem;
+    }
+
+    .notFound img {
+        height: 40vh;
+        width: fit-content;
+    }
+    .createBtn img{
+        display: none;
+        
+    }
+
+
+}

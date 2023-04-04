@@ -1,0 +1,59 @@
+.searchBar {
+    border: 2px solid var(--java);
+    border-radius: 15px;
+    transition: all 0.5s ease-in-out;
+    width: 25vw;
+    display: flex;
+    flex-wrap: no-wrap;
+    align-items: center;
+    position: relative;
+    left: 0;
+}
+
+.searchBar:hover {
+    background-color: var(--zuccini);
+}
+
+.input {
+    font-family: var(--secFont);
+    letter-spacing: -0.09rem;
+    outline: none;
+    box-shadow: none;
+    padding: 8px;
+    border: none;
+    font-size: 25px;
+    background-color: transparent;
+    color: rgb(95, 99, 95);
+}
+
+.buttonImg {
+    position: absolute;
+    right: 0;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 760px) {
+
+    .input{
+        font-size: 1.1rem;
+    }
+    .buttonImg{
+        align-self: center;
+        top: 9px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .searchBar{
+        width: 30vw;
+    }
+    .input{
+        max-width: 25vw;
+    }
+}
+
